@@ -36,3 +36,17 @@ const candidates = [
 ];
 
 console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
+
+
+//challenge 4: Longest Word where a function takes an array of strings and returns the longest string in the array. If there are multiple words with the same maximum length, it returns the first one that appears.
+function findLongestWord(words) {
+    if (words.length === 0) return null;
+    let longestWord = words[0];
+    for (let i = 1; i < words.length; i++) {
+        if (words[i].length > longestWord.length) {
+            longestWord = words[i];
+        }
+    }
+    return longestWord;
+}
+console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // Output: "grapefruit"
