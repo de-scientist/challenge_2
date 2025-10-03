@@ -151,3 +151,18 @@ function countOccurrences(arr) {
     return counts;
 }
 console.log(countOccurrences(["apple", "banana", "apple", "orange", "banana", "apple"])); // Outputs: { apple: 3, banana: 2, orange: 1 }
+
+
+//challenge 15: Remove Duplicates where a function  takes an array and returns a new array with all duplicate values removed. Preserve the original order of elements.
+function removeDuplicates(arr) {
+    const seen = new Set();
+    const result = [];
+    for (const item of arr) {
+        if (!seen.has(item)) {
+            seen.add(item);
+            result.push(item);
+        }
+    }
+    return result;
+}
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1, 5])); // Outputs: [ 1, 2, 3, 4, 5 ]
