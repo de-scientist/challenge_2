@@ -50,3 +50,10 @@ function findLongestWord(words) {
     return longestWord;
 }
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // Output: "grapefruit"
+
+
+//challenge 5: Count properties where a function takes an object and returns the number of properties (key-value pairs) in the object.
+function countProperties(obj) {
+    return Object.keys(obj).length;
+}
+console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // Output: 3
