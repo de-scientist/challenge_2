@@ -128,3 +128,16 @@ console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10)); // Outputs: -1
 
 
 
+//challenge 13: Linear Search All Indices where a function takes an array and a value. It should return an array of all the indices where the value appears. If the value isn’t found, return an empty array.
+function linearSearchAll(arr, value) {
+    const indices = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            indices.push(i);
+        }
+    }
+    return indices;
+}
+console.log(linearSearchAll([5, 3, 7, 1, 4, 7], 7)); // Outputs: [2, 5]
+console.log(linearSearchAll([5, 3, 7, 1, 4], 10)); // Outputs: []
+
