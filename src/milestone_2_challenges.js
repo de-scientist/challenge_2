@@ -87,3 +87,28 @@ function countTruthy(obj) {
 }
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // Outputs: 2  // "hello" and 42 are truthy
 
+
+
+//challenge 10: Average of Numbers where a function takes an array of numbers and returns their average. Return 0 if the array is empty.
+function average(arr) {
+    if (arr.length === 0) return 0;
+
+    const sum = arr.reduce((total, num) => total + num, 0);
+    return sum / arr.length;
+}
+console.log(average([2, 4, 6, 8])); // Outputs: 5
+
+
+
+//challenge 11: Linear Search where a function takes an array and a value. It should return the index of the first occurrence of the value in the array. If the value is not found, return -1.
+function linearSearch(arr, value) {
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] === value) {
+            return i;
+        } 
+    } 
+    return -1;
+}
+console.log(linearSearch([5, 3, 7, 1, 4], 7)); // Outputs: 2
+console.log(linearSearch([5, 3, 7, 1, 4], 10)); //Outputs: -1
+
