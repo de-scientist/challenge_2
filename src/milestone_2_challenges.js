@@ -81,4 +81,9 @@ function differenceEvenOdd(arr) {
 console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // Outputs: 3 (12-9)
 
 
-//
+//challenge 9: Count Truthy Values where a function takes an object and returns the number of properties that have truthy values.
+function countTruthy(obj) {
+    return Object.values(obj).filter(value => Boolean(value)).length;
+}
+console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // Outputs: 2  // "hello" and 42 are truthy
+
