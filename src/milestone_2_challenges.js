@@ -17,3 +17,22 @@ function findMax(arr) {
     return max;
 } 
 console.log(findMax([3, 7, 2, 9, 5])); // Output: 9
+
+
+//challenge 3: Election Winner where a function takes an array of objects and each object has two properties: name(string) and votes(number). The function should return the name of the candidate with the highest number of votes. Assume there is always a clear winner (no ties).
+function findWinner(candidates) {
+    let winner = candidates[0];
+    for (let i = 1; i < candidates.length; i++) {
+        if (candidates[i].votes > winner.votes) {
+            winner = candidates[i]; 
+        } 
+    }
+    return `{ name: "${winner.name}", votes: ${winner.votes} }`;
+}
+const candidates = [
+  { name: "Alice", votes: 50 },
+  { name: "Bob", votes: 75 },
+  { name: "Charlie", votes: 65 }
+];
+
+console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
