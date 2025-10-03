@@ -70,3 +70,15 @@ function sumEvenNumbers(arr) {
     return arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0)
 } 
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // Output: 12 
+
+
+//challenge 8: Difference Between Sum of Even and Odd Numbers where a function takes an array of numbers and returns the difference between the sum of even numbers and the sum of odd numbers.
+function differenceEvenOdd(arr) {
+    const sumEven = arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0);
+    const sumOdd = arr.filter(num => num % 2 !== 0).reduce((sum, num) => sum + num, 0);
+    return sumEven - sumOdd;
+}
+console.log(differenceEvenOdd([1, 2, 3, 4, 5, 6])); // Outputs: 3 (12-9)
+
+
+//
