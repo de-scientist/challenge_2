@@ -112,3 +112,19 @@ function linearSearch(arr, value) {
 console.log(linearSearch([5, 3, 7, 1, 4], 7)); // Outputs: 2
 console.log(linearSearch([5, 3, 7, 1, 4], 10)); //Outputs: -1
 
+
+
+//challenge 12: Reverse Linear Search where a function  takes an array and a value. It should return the index of the last occurrence of the value in the array. If the value is not found, return -1.
+function reverseLinearSearch(arr, value) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] === value) {
+            return i;
+        }
+    }
+    return -1;
+}
+console.log(reverseLinearSearch([5, 3, 7, 1, 4, 7], 7)); // Outputs: 5
+console.log(reverseLinearSearch([5, 3, 7, 1, 4], 10)); // Outputs: -1
+
+
+
