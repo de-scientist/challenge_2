@@ -65,3 +65,8 @@ function filterByLength(words, minLength) {
 console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // Outputs: [ 'giraffe', 'hippo', 'elephant' ]
 
 
+//challenge 7: Sum of Even Numbers where a function takes an array of numbers and returns the sum of all even numbers in the array.
+function sumEvenNumbers(arr) {
+    return arr.filter(num => num % 2 === 0).reduce((sum, num) => sum + num, 0)
+} 
+console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // Output: 12 
