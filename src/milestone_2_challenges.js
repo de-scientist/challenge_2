@@ -113,11 +113,23 @@ function countProperties(obj) {
 }
 console.log(countProperties({ name: "Alice", age: 25, city: "Paris" })); // Output: 3
 
+
 //challenge 6: Filter by length where a function takes an array of strings and a number minLength. Return a new array containing only the strings that are equal to or longer than minLength.
 function filterByLength(words, minLength) {
   return words.filter((word) => word.length >= minLength);
 }
 console.log(filterByLength(["cat", "giraffe", "hippo", "dog", "elephant"], 5)); // Outputs: [ 'giraffe', 'hippo', 'elephant' ]
+
+//filter by length with for loop
+const filterByLength2 = (arr, minLength) => {
+  let filtered = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > minLength) {
+      filtered.push(arr[i]);
+    }
+  }
+   return filtered;
+}
 
 //challenge 7: Sum of Even Numbers where a function takes an array of numbers and returns the sum of all even numbers in the array.
 function sumEvenNumbers(arr) {
