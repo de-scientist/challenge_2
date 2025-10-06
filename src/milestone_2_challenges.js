@@ -166,6 +166,11 @@ function countTruthy(obj) {
 }
 console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // Outputs: 2  // "hello" and 42 are truthy
 
+
+//falsy values in JS --> 0, "", false, null, undefined --> Always evaluates to false
+
+// All the others are truthy values --> Always evaluates to true
+
 //challenge 10: Average of Numbers where a function takes an array of numbers and returns their average. Return 0 if the array is empty.
 function average(arr) {
   if (arr.length === 0) return 0;
