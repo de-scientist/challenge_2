@@ -170,6 +170,12 @@ console.log(countTruthy({ a: 0, b: "hello", c: false, d: 42, e: null })); // Out
 //falsy values in JS --> 0, "", false, null, undefined --> Always evaluates to false
 
 // All the others are truthy values --> Always evaluates to true
+const countTruthy2 = obj => {
+  let keys = Object.keys(obj) 
+  for (let i = 0; i < keys.length; i++) {
+    
+  }
+}
 
 //challenge 10: Average of Numbers where a function takes an array of numbers and returns their average. Return 0 if the array is empty.
 function average(arr) {
