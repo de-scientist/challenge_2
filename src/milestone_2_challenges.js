@@ -61,7 +61,7 @@ const candidates = [
 console.log(findWinner(candidates)); // returns: { name: "Bob", votes: 75 }
 
 
-//election winner
+//election winner to return name only
 function findWinner2(candidatess) {
   let currentWinner = candidatess[0];
   for (let i = 1; i < candidatess.length; i++) {
@@ -77,7 +77,7 @@ const candidatess = [
   { name: "Charlie", votes: 65 },
 ];
 
-console.log(findWinner(candidatess)); // returns: { name: "Bob", votes: 75 }
+console.log(candidatess.name); // returns: { name: "Bob", votes: 75 }
 
 //challenge 4: Longest Word where a function takes an array of strings and returns the longest string in the array. If there are multiple words with the same maximum length, it returns the first one that appears.
 function findLongestWord(words) {
@@ -91,6 +91,21 @@ function findLongestWord(words) {
   return longestWord;
 }
 console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // Output: "grapefruit"
+
+
+// find longest word
+const findLongestWord2 = function(words) {
+    if (words.length === 0) return null;
+  let longestWord = words[0];
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longestWord.length) {
+      longestWord = words[i];
+    }
+  }
+  return longestWord;
+}
+console.log(findLongestWord(["apple", "banana", "pear", "grapefruit"])); // Output: "grapefruit"
+
 
 //challenge 5: Count properties where a function takes an object and returns the number of properties (key-value pairs) in the object.
 function countProperties(obj) {
