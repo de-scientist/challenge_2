@@ -137,6 +137,17 @@ function sumEvenNumbers(arr) {
 }
 console.log(sumEvenNumbers([1, 2, 3, 4, 5, 6])); // Output: 12
 
+
+// sum of even numbers
+const sumEvenNumber = numbers => {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      total += numbers;
+    }
+  }
+  return total
+}
 //challenge 8: Difference Between Sum of Even and Odd Numbers where a function takes an array of numbers and returns the difference between the sum of even numbers and the sum of odd numbers.
 function differenceEvenOdd(arr) {
   const sumEven = arr
