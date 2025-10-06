@@ -4,6 +4,19 @@ function sumOfPositives(arr) {
 }
 console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // Output: 15
 
+//sum of positives
+function sumPositives(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      total += arr[i];
+    }
+  }
+  return total;
+}
+console.log(sumOfPositives([1, -3, 5, -2, 9, -8])); // Output: 15
+
+
 //Challenge 2: Find Maximum value in an array where a function takes an array of numbers and returns the maximum value in the array without using built-in Math.max() function.
 function findMax(arr) {
   if (arr.length === 0) return null;
